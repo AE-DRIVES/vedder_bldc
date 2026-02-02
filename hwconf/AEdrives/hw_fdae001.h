@@ -29,17 +29,17 @@
 // #define HW_HAS_PHASE_SHUNTS
 
 // Macros
-#define ENABLE_GATE()			palSetPad(GPIOC, 9) 
-#define DISABLE_GATE()			palClearPad(GPIOC, 9)
+#define ENABLE_GATE()			palSetPad(GPIOB, 7) 
+#define DISABLE_GATE()			palClearPad(GPIOB, 7)
 
 #define DCCAL_ON()
 #define DCCAL_OFF()
-#define IS_DRV_FAULT()			(!palReadPad(GPIOC, 12))
+#define IS_DRV_FAULT()			(!palReadPad(GPIOB, 8))
 
 #define LED_GREEN_ON()			palSetPad(GPIOB, 0)
 #define LED_GREEN_OFF()			palClearPad(GPIOB, 0)
-#define LED_RED_ON()			palSetPad(GPIOB, 1)
-#define LED_RED_OFF()			palClearPad(GPIOB, 1)
+#define LED_RED_ON()			palSetPad(GPIOC, 5)
+#define LED_RED_OFF()			palClearPad(GPIOC, 5)
 
 /*
  * ADC Vector
@@ -67,9 +67,9 @@
 #define HW_ADC_NBR_CONV			5
 
 // ADC Indexes
-#define ADC_IND_SENS1			0
+#define ADC_IND_SENS1			2
 #define ADC_IND_SENS2			1
-#define ADC_IND_SENS3			2
+#define ADC_IND_SENS3			0
 #define ADC_IND_CURR1			3
 #define ADC_IND_CURR2			4
 #define ADC_IND_CURR3			5
