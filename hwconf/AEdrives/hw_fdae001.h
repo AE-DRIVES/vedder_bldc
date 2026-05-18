@@ -20,7 +20,7 @@
 #ifndef HW_FDAE001_H_
 #define HW_FDAE001_H_
 
-#define HW_NAME					"FDAE001"
+#define HW_NAME					"FDAE002"
 
 // HW properties
 //#define HW_HAS_DRV8301
@@ -29,17 +29,17 @@
 // #define HW_HAS_PHASE_SHUNTS
 
 // Macros
-#define ENABLE_GATE()			palSetPad(GPIOB, 7) 
-#define DISABLE_GATE()			palClearPad(GPIOB, 7)
+#define ENABLE_GATE()			palSetPad(GPIOB, 9) 
+#define DISABLE_GATE()			palClearPad(GPIOB, 9)
 
 #define DCCAL_ON()
 #define DCCAL_OFF()
-#define IS_DRV_FAULT()			(!palReadPad(GPIOB, 8))
+#define IS_DRV_FAULT()			(!palReadPad(GPIOB, 12))
 
 #define LED_GREEN_ON()			palSetPad(GPIOB, 0)
 #define LED_GREEN_OFF()			palClearPad(GPIOB, 0)
-#define LED_RED_ON()			palSetPad(GPIOC, 5)
-#define LED_RED_OFF()			palClearPad(GPIOC, 5)
+#define LED_RED_ON()			palSetPad(GPIOC, 1)
+#define LED_RED_OFF()			palClearPad(GPIOC, 1)
 
 /*
  * ADC Vector
@@ -67,9 +67,9 @@
 #define HW_ADC_NBR_CONV			5
 
 // ADC Indexes
-#define ADC_IND_SENS1			2
+#define ADC_IND_SENS1			0
 #define ADC_IND_SENS2			1
-#define ADC_IND_SENS3			0
+#define ADC_IND_SENS3			2
 #define ADC_IND_CURR1			3
 #define ADC_IND_CURR2			4
 #define ADC_IND_CURR3			5
@@ -90,13 +90,13 @@
 #define VIN_R1					39000.0
 #endif
 #ifndef VIN_R2
-#define VIN_R2					2200.0
+#define VIN_R2					1200.0
 #endif
 #ifndef CURRENT_AMP_GAIN
 #define CURRENT_AMP_GAIN		40.0
 #endif
 #ifndef CURRENT_SHUNT_RES
-#define CURRENT_SHUNT_RES		0.0005
+#define CURRENT_SHUNT_RES		0.0003 //CHANGED FOR PARALLEL RESISTORS
 #endif
 
 // Input voltage
