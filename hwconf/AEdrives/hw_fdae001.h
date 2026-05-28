@@ -29,12 +29,12 @@
 // #define HW_HAS_PHASE_SHUNTS
 
 // Macros
-#define ENABLE_GATE()			palSetPad(GPIOB, 9) 
-#define DISABLE_GATE()			palClearPad(GPIOB, 9)
+#define ENABLE_GATE()			palSetPad(GPIOC, 9) 
+#define DISABLE_GATE()			palClearPad(GPIOC, 9)
 
 #define DCCAL_ON()
 #define DCCAL_OFF()
-#define IS_DRV_FAULT()			(!palReadPad(GPIOB, 12))
+#define IS_DRV_FAULT()			(!palReadPad(GPIOC, 12))
 
 #define LED_GREEN_ON()			palSetPad(GPIOB, 0)
 #define LED_GREEN_OFF()			palClearPad(GPIOB, 0)
