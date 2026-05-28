@@ -247,7 +247,7 @@
 #define MCCONF_DEFAULT_MOTOR_TYPE		MOTOR_TYPE_FOC
 #endif
 #ifndef MCCONF_L_MAX_ABS_CURRENT
-#define MCCONF_L_MAX_ABS_CURRENT		20	// The maximum absolute current above which a fault is generated
+#define MCCONF_L_MAX_ABS_CURRENT		450	// The maximum absolute current above which a fault is generated
 #endif
 #ifndef MCCONF_FOC_SAMPLE_V0_V7
 #define MCCONF_FOC_SAMPLE_V0_V7			true	// Run control loop in both v0 and v7 (requires phase shunts)
@@ -263,11 +263,11 @@ Safety Cutoff, HW_LIM_CURRENT_ABS,       30.0 A,  Instant shutdown threshold.
 */
 
 // Setting limits
-#define HW_LIM_CURRENT			-20.0, 20.0
-#define HW_LIM_CURRENT_IN		-20.0,20.0
-#define HW_LIM_CURRENT_ABS		0.0, 22.0
+#define HW_LIM_CURRENT			-400.0, 400.0
+#define HW_LIM_CURRENT_IN		-200.0,200.0
+#define HW_LIM_CURRENT_ABS		-500.0, 500.0
 #define HW_LIM_VIN				12, 58
-#define HW_LIM_ERPM				-5400, 5400
+#define HW_LIM_ERPM				-40000, 40000
 #define HW_LIM_DUTY_MIN			0.0, 0.99
 #define HW_LIM_DUTY_MAX			0.0, 0.99
 #define HW_LIM_TEMP_FET			-40.0, 110.0
