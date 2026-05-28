@@ -38,8 +38,8 @@
 
 #define LED_GREEN_ON()			palSetPad(GPIOB, 0)
 #define LED_GREEN_OFF()			palClearPad(GPIOB, 0)
-#define LED_RED_ON()			palSetPad(GPIOC, 1)
-#define LED_RED_OFF()			palClearPad(GPIOC, 1)
+#define LED_RED_ON()			palSetPad(GPIOB, 1)
+#define LED_RED_OFF()			palClearPad(GPIOB, 1)
 
 /*
  * ADC Vector
