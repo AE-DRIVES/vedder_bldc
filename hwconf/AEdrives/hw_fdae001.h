@@ -20,7 +20,7 @@
 #ifndef HW_FDAE001_H_
 #define HW_FDAE001_H_
 
-#define HW_NAME					"FDAE002"
+#define HW_NAME					"DALAE002"
 
 // HW properties
 //#define HW_HAS_DRV8301
@@ -265,7 +265,7 @@ Safety Cutoff, HW_LIM_CURRENT_ABS,       30.0 A,  Instant shutdown threshold.
 // Setting limits
 #define HW_LIM_CURRENT			-400.0, 400.0
 #define HW_LIM_CURRENT_IN		-200.0,200.0
-#define HW_LIM_CURRENT_ABS		-500.0, 500.0
+#define HW_LIM_CURRENT_ABS		0.0, 500.0
 #define HW_LIM_VIN				12, 58
 #define HW_LIM_ERPM				-40000, 40000
 #define HW_LIM_DUTY_MIN			0.0, 0.99
